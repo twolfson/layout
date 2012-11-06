@@ -25,10 +25,33 @@ exports['awesome'] = {
     // setup here
     done();
   },
-  'no args': function(test) {
-    test.expect(1);
-    // tests here
-    test.equal(layout.awesome(), 'awesome', 'should be awesome.');
+  'addItem': function (test) {
+    test.expect(3);
+
+    // A top-down layout
+    var topDown = layout('top-down');
+      // can accept a new item
+      topDown.addItem('item', {'width': 20, 'height': 30});
+        // and export a layout
+        var result = topDown['export']();
+        test.equal(result.width, 20, 'Result has a width of 20');
+        test.equal(result.height, 30, 'Result has a height of 30');
+        test.equal(result.items.length, 1, 'Result has 1 item');
+
+    // Complete the test
     test.done();
+  // },
+  // 'top-down': function (test) {
+  //   test.expect(1);
+
+  //   var items = {
+  //     'medium': [20, 20],
+  //     'small': [10, 10],
+  //     'large': [50, 50]
+  //   };
+
+  //   // tests here
+  //   test.equal(layout.awesome(), 'awesome', 'should be awesome.');
+  //   test.done();
   }
 };

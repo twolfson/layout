@@ -17,13 +17,13 @@ layer.addItem({'height': 20, 'width': 10, 'meta': 'medium'});
 layer.addItem({'height': 10, 'width': 10, 'meta': 'small'});
 layer.addItem({'height': 50, 'width': 40, 'meta': 'large'});
 
-// Export the items
-var items = layer['export']();
+// Export the info
+var info = layer['export']();
 
 // We get back the width and height of the pack as well as organized items
 {
-    width: 40,
     height: 80,
+    width: 40,
     items: [{
         height: 10,
         width: 10,
@@ -47,16 +47,48 @@ var items = layer['export']();
 ```
 
 ## Documentation
-_(Coming soon)_
+Layout is a constructor function
+```js
+/**
+ * Layout adds items in an algorithmic fashion
+ * @constructor
+ * @param {String|Function} [algorithm="top-down"] Name of algorithm or custom algorithm to use
+ * Algorithms available: top-down, left-right, diagonal, alt-diagonal
+ */
+```
 
-## Examples
-_(Coming soon)_
+Items can be added via `addItem` which are required to have a `height` and `width`. Any additional info should be stored inside of `meta`.
+```js
+/**
+ * @param {Object} item Item to store -- this currently is mutated in-memory
+ * @param {Number} item.width Width of the item
+ * @param {Number} item.height Height of the item
+ * @param {Mixed} [item.meta] Any meta data you would like to store related to the item
+ */
+```
+
+`export` is how you take your items and organize them.
+```js
+/**
+ * @returns {Object} retObj
+ * @returns {Number} retObj.height Height of the processed layout
+ * @returns {Number} retObj.width Width of the processed layout
+ * @returns {Mixed[]} retObj.items Organized items
+ */
+```
+
+### Custom algorithms
+You can add your own algorithm via `layout.addAlgorithm`
+```js
+/**
+ * Method to add new algorithms via
+ * @param {String} name Name of algorithm
+ * @param {Function} algorithm Algorithm to bind under name
+ */
+```
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
-
-## Release History
-_(Nothing yet)_
 
 ## License
 Copyright (c) 2012 Todd Wolfson

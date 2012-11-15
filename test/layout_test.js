@@ -20,7 +20,7 @@ var layout = require('../lib/layout.js');
     test.ifError(value)
 */
 
-exports['awesome'] = {
+exports['layout'] = {
   setUp: function(done) {
     // setup here
     done();
@@ -44,7 +44,7 @@ exports['awesome'] = {
     test.done();
   },
   'top-down': function (test) {
-    test.expect(3);
+    test.expect(5);
 
     // A top-down layout
     var topDown = layout('top-down');

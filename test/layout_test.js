@@ -57,6 +57,8 @@ exports['awesome'] = {
         test.equal(result.height, 80, 'Result has a height of 80');
         test.equal(result.width, 40, 'Result has a width of 40');
         test.equal(result.items.length, 3, 'Result has 3 items');
+        test.equal(result.items[1].y, 10, 'Second item is 10 pixels from the top');
+        test.equal(result.items[2].y, 30, 'Third item is 30 pixels from the top');
 
     test.done();
   }

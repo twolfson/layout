@@ -31,13 +31,14 @@ exports['awesome'] = {
     // A top-down layout
     var topDown = layout('top-down');
       // can accept a new item
-      topDown.addItem('item', {'width': 20, 'height': 30});
+      var meta = {'Hello': 'World!'};
+      topDown.addItem({'width': 20, 'height': 30, 'meta': meta});
         // and export a layout
         var result = topDown['export']();
-        test.equal(result.height, 30, 'Result has a height of 30');
-        test.equal(result.width, 20, 'Result has a width of 20');
-        test.ok(result.items, 'Result has items');
-        test.ok(result.items.item, 'Item exists');
+        test.strictEqual(result.height, 30, 'Result has a height of 30');
+        test.strictEqual(result.width, 20, 'Result has a width of 20');
+        test.strictEqual(result.items.length, 1, 'Result has 1 item');
+        test.strictEqual(result.items[0].meta, meta, 'Item meta data is preserved');
 
     // Complete the test
     test.done();

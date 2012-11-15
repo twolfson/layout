@@ -29,12 +29,12 @@ exports['layout'] = {
     test.expect(4);
 
     // A top-down layout
-    var topDown = layout('top-down');
+    var layer = layout('top-down');
       // can accept a new item
       var meta = {'Hello': 'World!'};
-      topDown.addItem({'height': 30, 'width': 20, 'meta': meta});
+      layer.addItem({'height': 30, 'width': 20, 'meta': meta});
         // and export a layout
-        var result = topDown['export']();
+        var result = layer['export']();
         test.strictEqual(result.height, 30, 'Result has a height of 30');
         test.strictEqual(result.width, 20, 'Result has a width of 20');
         test.strictEqual(result.items.length, 1, 'Result has 1 item');
@@ -47,13 +47,13 @@ exports['layout'] = {
     test.expect(6);
 
     // A top-down layout
-    var topDown = layout('top-down');
+    var layer = layout('top-down');
       // with multiple items
-      topDown.addItem({'height': 20, 'width': 10, 'meta': 'medium'}); // 20 x 10
-      topDown.addItem({'height': 10, 'width': 10, 'meta': 'small'});  // 30 x 10
-      topDown.addItem({'height': 50, 'width': 40, 'meta': 'large'});  // 80 x 40
+      layer.addItem({'height': 20, 'width': 10, 'meta': 'medium'}); // 20 x 10
+      layer.addItem({'height': 10, 'width': 10, 'meta': 'small'});  // 30 x 10
+      layer.addItem({'height': 50, 'width': 40, 'meta': 'large'});  // 80 x 40
         // organizes them in a top-down manner
-        var result = topDown['export']();
+        var result = layer['export']();
         test.equal(result.height, 80, 'Result has a height of 80');
         test.equal(result.width, 40, 'Result has a width of 40');
         test.equal(result.items.length, 3, 'Result has 3 items');
@@ -66,14 +66,14 @@ exports['layout'] = {
   'left-right': function (test) {
     test.expect(6);
 
-    // A top-down layout
-    var topDown = layout('left-right');
+    // A left-right layout
+    var layer = layout('left-right');
       // with multiple items
-      topDown.addItem({'height': 20, 'width': 10, 'meta': 'medium'}); // 20 x 10
-      topDown.addItem({'height': 10, 'width': 10, 'meta': 'small'});  // 20 x 20
-      topDown.addItem({'height': 50, 'width': 40, 'meta': 'large'});  // 50 x 60
+      layer.addItem({'height': 20, 'width': 10, 'meta': 'medium'}); // 20 x 10
+      layer.addItem({'height': 10, 'width': 10, 'meta': 'small'});  // 20 x 20
+      layer.addItem({'height': 50, 'width': 40, 'meta': 'large'});  // 50 x 60
         // organizes them in a top-down manner
-        var result = topDown['export']();
+        var result = layer['export']();
         test.equal(result.height, 50, 'Result has a height of 50');
         test.equal(result.width, 60, 'Result has a width of 60');
         test.equal(result.items.length, 3, 'Result has 3 items');
@@ -86,14 +86,14 @@ exports['layout'] = {
   'diagonal': function (test) {
     test.expect(7);
 
-    // A top-down layout
-    var topDown = layout('diagonal');
+    // A diagonal layout
+    var layer = layout('diagonal');
       // with multiple items
-      topDown.addItem({'height': 20, 'width': 10, 'meta': 'medium'}); // 20 x 10
-      topDown.addItem({'height': 10, 'width': 10, 'meta': 'small'});  // 30 x 20
-      topDown.addItem({'height': 50, 'width': 40, 'meta': 'large'});  // 80 x 60
+      layer.addItem({'height': 20, 'width': 10, 'meta': 'medium'}); // 20 x 10
+      layer.addItem({'height': 10, 'width': 10, 'meta': 'small'});  // 30 x 20
+      layer.addItem({'height': 50, 'width': 40, 'meta': 'large'});  // 80 x 60
         // organizes them in a top-down manner
-        var result = topDown['export']();
+        var result = layer['export']();
         test.equal(result.height, 80, 'Result has a height of 80');
         test.equal(result.width, 60, 'Result has a width of 60');
         test.equal(result.items.length, 3, 'Result has 3 items');
@@ -107,14 +107,14 @@ exports['layout'] = {
   'reverse-diagonal': function (test) {
     test.expect(9);
 
-    // A top-down layout
-    var topDown = layout('reverse-diagonal');
+    // A alt-diagonal layout
+    var layer = layout('alt-diagonal');
       // with multiple items
-      topDown.addItem({'height': 20, 'width': 10, 'meta': 'medium'}); // 20 x 10
-      topDown.addItem({'height': 10, 'width': 10, 'meta': 'small'});  // 30 x 20
-      topDown.addItem({'height': 50, 'width': 40, 'meta': 'large'});  // 80 x 60
+      layer.addItem({'height': 20, 'width': 10, 'meta': 'medium'}); // 20 x 10
+      layer.addItem({'height': 10, 'width': 10, 'meta': 'small'});  // 30 x 20
+      layer.addItem({'height': 50, 'width': 40, 'meta': 'large'});  // 80 x 60
         // organizes them in a top-down manner
-        var result = topDown['export']();
+        var result = layer['export']();
         test.equal(result.height, 80, 'Result has a height of 80');
         test.equal(result.width, 60, 'Result has a width of 60');
         test.equal(result.items.length, 3, 'Result has 3 items');

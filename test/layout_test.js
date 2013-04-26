@@ -122,25 +122,29 @@ exports['layout'] = {
         test.equal(result.items[2].x, 60 - 40 - 20, 'Third item is 30 pixels from the right');
 
     test.done();
-  // },
-  // 'bottom-up': function (test) {
-  //   test.expect(6);
+  },
+  'binary': function (test) {
+    test.expect(9);
 
-  //   // A bottom-up layout
-  //   var layer = layout('bottom-up');
-  //     // with multiple items
-  //     layer.addItem({'height': 20, 'width': 10, 'meta': 'medium'}); // 20 x 10
-  //     layer.addItem({'height': 10, 'width': 10, 'meta': 'small'});  // 30 x 10
-  //     layer.addItem({'height': 50, 'width': 40, 'meta': 'large'});  // 80 x 40
-  //       // organizes them in a top-down manner
-  //       var result = layer['export']();
-  //       test.equal(result.height, 80, 'Result has a height of 80');
-  //       test.equal(result.width, 40, 'Result has a width of 40');
-  //       test.equal(result.items.length, 3, 'Result has 3 items');
-  //       test.equal(result.items[1].x, 0, 'Second item is 0 pixels from the left');
-  //       test.equal(result.items[1].y, 50, 'Second item is 50 pixels from the top');
-  //       test.equal(result.items[2].y, 70, 'Third item is 70 pixels from the top');
+    // A alt-diagonal layout
+    var layer = layout('binary');
+      // with multiple items
+      layer.addItem({'height': 20, 'width': 10, 'meta': 'medium'});
+      layer.addItem({'height': 10, 'width': 10, 'meta': 'small'});
+      layer.addItem({'height': 50, 'width': 40, 'meta': 'large'});
+        // organizes them in a top-down manner
+        var result = layer['export']();
+      console.log(result);
+        // test.equal(result.height, 80, 'Result has a height of 80');
+        // test.equal(result.width, 60, 'Result has a width of 60');
+        // test.equal(result.items.length, 3, 'Result has 3 items');
+        // test.equal(result.items[0].y, 0, 'First item is 0 pixels from the top');
+        // test.equal(result.items[0].x, 60 - 10, 'First item is 0 pixels from the right)');
+        // test.equal(result.items[1].y, 10, 'Second item is 10 pixels from the top');
+        // test.equal(result.items[1].x, 60 - 10 - 10, 'Second item is 10 pixels from the left');
+        // test.equal(result.items[2].y, 30, 'Third item is 30 pixels from the top');
+        // test.equal(result.items[2].x, 60 - 40 - 20, 'Third item is 30 pixels from the right');
 
-  //   test.done();
+    test.done();
   }
 };

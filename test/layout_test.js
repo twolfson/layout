@@ -21,10 +21,6 @@ var layout = require('../lib/layout.js');
 */
 
 exports['layout'] = {
-  setUp: function(done) {
-    // setup here
-    done();
-  },
   'addItem': function (test) {
     test.expect(4);
 

@@ -123,11 +123,11 @@ exports['layout'] = {
 
     test.done();
   },
-  'binary': function (test) {
+  'binary-tree': function (test) {
     test.expect(9);
 
     // A alt-diagonal layout
-    var layer = layout('binary');
+    var layer = layout('binary-tree');
       // with multiple items
       layer.addItem({'height': 20, 'width': 10, 'meta': 'medium'});
       layer.addItem({'height': 10, 'width': 10, 'meta': 'small'});

@@ -53,7 +53,7 @@ Layout is a constructor function
  * Layout adds items in an algorithmic fashion
  * @constructor
  * @param {String|Function} [algorithm="top-down"] Name of algorithm or custom algorithm to use
- * Algorithms available: top-down, left-right, diagonal, alt-diagonal
+ * Algorithms available: top-down, left-right, diagonal, alt-diagonal, binary-tree
  */
 ```
 

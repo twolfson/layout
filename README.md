@@ -1,4 +1,4 @@
-# layout
+# layout [![Donate on Gittip](http://badgr.co/gittip/twolfson.png)](https://www.gittip.com/twolfson/)
 
 Organize and layout items based on various algorithms
 

@@ -1,4 +1,4 @@
-# layout [![Donate on Gittip](http://badgr.co/gittip/twolfson.png)](https://www.gittip.com/twolfson/)
+# layout [![Build status](https://travis-ci.org/twolfson/layout.png?branch=master)](https://travis-ci.org/twolfson/layout)
 
 Organize and layout items based on various algorithms
 
@@ -89,6 +89,14 @@ You can add your own algorithm via `layout.addAlgorithm`
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).
+
+## Donating
+Support this project and [others by twolfson][gittip] via [gittip][].
+
+[![Support via Gittip][gittip-badge]][gittip]
+
+[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
+[gittip]: https://www.gittip.com/twolfson/
 
 ## License
 Copyright (c) 2012 Todd Wolfson

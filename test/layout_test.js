@@ -147,6 +147,8 @@ exports['layout'] = {
     test.done();
   },
   'non-sorting layout': function (test) {
+    test.expect(9);
+
     // A layout without sorting and multiple items
     var layer = layout('top-down', {'sort': false});
       layer.addItem({'height': 20, 'width': 10, 'meta': 'medium'});
@@ -157,11 +159,11 @@ exports['layout'] = {
         test.equal(result.height, 80, 'Result has a height of 80');
         test.equal(result.width, 40, 'Result has a width of 40');
         test.equal(result.items.length, 3, 'Result has 3 items');
-        test.equal(result.items[0].y, 20);
+        test.equal(result.items[0].y, 0);
         test.equal(result.items[0].x, 0);
-        test.equal(result.items[1].y, 20 + 10);
+        test.equal(result.items[1].y, 0 + 20);
         test.equal(result.items[1].x, 0);
-        test.equal(result.items[2].y, 20 + 10 + 50);
+        test.equal(result.items[2].y, 0 + 20 + 10);
         test.equal(result.items[2].x, 0);
 
     test.done();

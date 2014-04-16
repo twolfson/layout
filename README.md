@@ -52,7 +52,7 @@ Layout is a constructor function
 /**
  * Layout adds items in an algorithmic fashion
  * @constructor
- * @param {String|Function} [algorithm="top-down"] Name of algorithm or custom algorithm to use
+ * @param {String|Object} [algorithm="top-down"] Name of algorithm or custom algorithm to use
  * Algorithms available: top-down, left-right, diagonal, alt-diagonal, binary-tree
  */
 ```
@@ -83,7 +83,9 @@ You can add your own algorithm via `layout.addAlgorithm`
 /**
  * Method to add new algorithms via
  * @param {String} name Name of algorithm
- * @param {Function} algorithm Algorithm to bind under name
+ * @param {Object} algorithm Algorithm to bind under name
+ * @param {Function} algorithm.sort Algorithm to sort object by
+ * @param {Function} algorithm.placeItems Algorithm to place items by
  */
 ```
 

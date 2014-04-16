@@ -134,8 +134,8 @@ exports['layout'] = {
       layer.addItem({'height': 50, 'width': 40, 'meta': 'large'});
         // organizes them in a a well packed manner
         var result = layer['export']();
-        test.equal(result.height, 50, 'Result has a height of 80');
-        test.equal(result.width, 50, 'Result has a width of 60');
+        test.equal(result.height, 50, 'Result has a height of 50');
+        test.equal(result.width, 50, 'Result has a width of 50');
         test.equal(result.items.length, 3, 'Result has 3 items');
         test.equal(typeof result.items[0].y, 'number');
         test.equal(typeof result.items[0].x, 'number');
@@ -143,6 +143,26 @@ exports['layout'] = {
         test.equal(typeof result.items[1].x, 'number');
         test.equal(typeof result.items[2].y, 'number');
         test.equal(typeof result.items[2].x, 'number');
+
+    test.done();
+  },
+  'non-sorting layout': function (test) {
+    // A layout without sorting and multiple items
+    var layer = layout('top-down', {'sort': false});
+      layer.addItem({'height': 20, 'width': 10, 'meta': 'medium'});
+      layer.addItem({'height': 10, 'width': 10, 'meta': 'small'});
+      layer.addItem({'height': 50, 'width': 40, 'meta': 'large'});
+        // packs them in the order they were received
+        var result = layer['export']();
+        test.equal(result.height, 80, 'Result has a height of 80');
+        test.equal(result.width, 40, 'Result has a width of 40');
+        test.equal(result.items.length, 3, 'Result has 3 items');
+        test.equal(result.items[0].y, 20);
+        test.equal(result.items[0].x, 0);
+        test.equal(result.items[1].y, 20 + 10);
+        test.equal(result.items[1].x, 0);
+        test.equal(result.items[2].y, 20 + 10 + 50);
+        test.equal(result.items[2].x, 0);
 
     test.done();
   }

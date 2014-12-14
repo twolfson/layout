@@ -103,7 +103,8 @@ The `top-down` algorithm places items vertically.
 
 By default, it sorts from smallest (top) to largest (bottom). However, this can be disabled via `sort: false`.
 
-##### Options
+**Options:**
+
 - sort `Boolean` Flag to enable/disable sorting from smallest (top) to largest (bottom)
     - By default, this is enabled (`true`)
 
@@ -114,7 +115,8 @@ The `left-right` algorithm places items horizontally.
 
 By default, it sorts from smallest (left) to largest (right). However, this can be disabled via `sort: false`.
 
-##### Options
+**Options:**
+
 - sort `Boolean` Flag to enable/disable sorting from smallest (left) to largest (right)
     - By default, this is enabled (`true`)
 
@@ -125,7 +127,8 @@ The `diagonal` algorithm places items diagonally (top-left to bottom-right).
 
 By default, it sorts from smallest (top-left) to largest (bottom-right). However, this can be disabled via `sort: false`.
 
-##### Options
+**Options:**
+
 - sort `Boolean` Flag to enable/disable sorting from smallest (top-left) to largest (bottom-right)
     - By default, this is enabled (`true`)
 
@@ -136,7 +139,8 @@ The `alt-diagonal` algorithm places items diagonally (top-right to bottom-left).
 
 By default, it sorts from smallest (top-right) to largest (bottom-left). However, this can be disabled via `sort: false`.
 
-##### Options
+**Options:**
+
 - sort `Boolean` Flag to enable/disable sorting from smallest (top-right) to largest (bottom-left)
     - By default, this is enabled (`true`)
 

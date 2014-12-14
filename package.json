@@ -30,6 +30,9 @@
     "test": "npm run lint && nodeunit test/"
   },
   "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-cli": "~0.1.13",
+    "grunt-spritesmith": "~2.20.0",
     "jshint": "~2.5.10",
     "nodeunit": "~0.9.0"
   },

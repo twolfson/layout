@@ -5,7 +5,7 @@ Organize and layout items based on various algorithms
 ## Getting Started
 Install the module with: `npm install layout`
 
-```javascript
+```js
 // Load in layout
 var layout = require('layout');
 
@@ -99,11 +99,6 @@ Support this project and [others by twolfson][gratipay] via [gratipay][].
 
 [gratipay-badge]: https://cdn.rawgit.com/gratipay/gratipay-badge/2.x.x/dist/gratipay.png
 [gratipay]: https://www.gratipay.com/twolfson/
-
-[![Support via Gittip][gittip-badge]][gittip]
-
-[gittip-badge]: https://rawgithub.com/twolfson/gittip-badge/master/dist/gittip.png
-[gittip]: https://www.gittip.com/twolfson/
 
 ## License
 Copyright (c) 2012-2014 Todd Wolfson

@@ -1,16 +1,11 @@
 module.exports = function(grunt) {
-  // Project configuration.
+  // Configure our project
   grunt.initConfig({
-    pkg: '<json:package.json>',
     test: {
       files: ['test/**/*.js']
     },
     lint: {
       files: ['grunt.js', 'lib/**/*.js', 'test/**/*.js']
-    },
-    watch: {
-      files: '<config:lint.files>',
-      tasks: 'default'
     },
     jshint: {
       options: {
@@ -33,7 +28,8 @@ module.exports = function(grunt) {
     }
   });
 
-  // Default task.
-  grunt.registerTask('default', 'lint test');
+  // Load in dependencies
 
+  // Define our tests
+  grunt.registerTask('default', 'lint test');
 };

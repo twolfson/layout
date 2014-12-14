@@ -2,6 +2,8 @@
 
 Organize and layout items based on various algorithms
 
+Visualizations of output data:
+
 |           `top-down`           |            `left-right`            |           `diagonal`           |             `alt-diagonal`             |            `binary-tree`             |
 |--------------------------------|------------------------------------|--------------------------------|----------------------------------------|--------------------------------------|
 | ![top-down](docs/top-down.png) | ![left-right](docs/left-right.png) | ![diagonal](docs/diagonal.png) | ![alt-diagonal](docs/alt-diagonal.png) | ![binary-tree](docs/binary-tree.png) |

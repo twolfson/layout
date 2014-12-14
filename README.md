@@ -101,5 +101,5 @@ Support this project and [others by twolfson][gittip] via [gittip][].
 [gittip]: https://www.gittip.com/twolfson/
 
 ## License
-Copyright (c) 2012 Todd Wolfson
+Copyright (c) 2012-2014 Todd Wolfson
 Licensed under the MIT license.

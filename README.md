@@ -4,9 +4,15 @@ Organize and layout items based on various algorithms
 
 Visualizations of output data:
 
-|           `top-down`           |            `left-right`            |           `diagonal`           |             `alt-diagonal`             |            `binary-tree`             |
-|--------------------------------|------------------------------------|--------------------------------|----------------------------------------|--------------------------------------|
-| ![top-down](docs/top-down.png) | ![left-right](docs/left-right.png) | ![diagonal](docs/diagonal.png) | ![alt-diagonal](docs/alt-diagonal.png) | ![binary-tree](docs/binary-tree.png) |
+|         `top-down`        |          `left-right`         |         `diagonal`        |           `alt-diagonal`          |          `binary-tree`          |
+|---------------------------|-------------------------------|---------------------------|-----------------------------------|---------------------------------|
+| ![top-down][top-down-img] | ![left-right][left-right-img] | ![diagonal][diagonal-img] | ![alt-diagonal][alt-diagonal-img] | ![binary-tree][binary-tree-img] |
+
+[top-down-img]: docs/top-down.png
+[left-right-img]: docs/left-right.png
+[diagonal-img]: docs/diagonal.png
+[alt-diagonal-img]: docs/alt-diagonal.png
+[binary-tree-img]: docs/binary-tree.png
 
 ## Getting Started
 Install the module with: `npm install layout`

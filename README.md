@@ -99,6 +99,8 @@ Currently `layout` supports 5 different layout types which are listed below.
 #### `top-down`
 The `top-down` algorithm places items vertically.
 
+![top-down image][top-down-img]
+
 By default, it sorts from smallest (top) to largest (bottom). However, this can be disabled via `sort: false`.
 
 ##### Options
@@ -107,6 +109,8 @@ By default, it sorts from smallest (top) to largest (bottom). However, this can 
 
 #### `left-right`
 The `left-right` algorithm places items horizontally.
+
+![left-right image][left-right-img]
 
 By default, it sorts from smallest (left) to largest (right). However, this can be disabled via `sort: false`.
 
@@ -117,6 +121,8 @@ By default, it sorts from smallest (left) to largest (right). However, this can 
 #### `diagonal`
 The `diagonal` algorithm places items diagonally (top-left to bottom-right).
 
+![diagonal image][diagonal-img]
+
 By default, it sorts from smallest (top-left) to largest (bottom-right). However, this can be disabled via `sort: false`.
 
 ##### Options
@@ -125,6 +131,8 @@ By default, it sorts from smallest (top-left) to largest (bottom-right). However
 
 #### `alt-diagonal`
 The `alt-diagonal` algorithm places items diagonally (top-right to bottom-left).
+
+![alt-diagonal image][alt-diagonal-img]
 
 By default, it sorts from smallest (top-right) to largest (bottom-left). However, this can be disabled via `sort: false`.
 
@@ -138,6 +146,8 @@ The `binary-tree` algorithm packs items via the [binary tree algorithm][].
 This is an efficient way to pack items into the smallest container possible.
 
 [binary tree algorithm]: http://codeincomplete.com/posts/2011/5/7/bin_packing/
+
+![binary-tree image][binary-tree-img]
 
 ### Custom algorithms
 You can add your own algorithm via `layout.addAlgorithm`

@@ -1,7 +1,7 @@
 {
   "name": "layout",
   "description": "Organize and layout items based on various algorithms",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "homepage": "https://github.com/twolfson/layout",
   "author": {
     "name": "Todd Wolfson",
@@ -23,13 +23,15 @@
   ],
   "main": "lib/layout",
   "engines": {
-    "node": ">= 0.6.0"
+    "node": ">= 0.8.0"
   },
   "scripts": {
-    "test": "grunt test"
+    "lint": "jshint lib/ test/",
+    "test": "npm run lint && nodeunit test/"
   },
   "devDependencies": {
-    "grunt": "~0.3.12"
+    "jshint": "~2.5.10",
+    "nodeunit": "~0.9.0"
   },
   "keywords": [
     "layout",

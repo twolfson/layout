@@ -1,6 +1,6 @@
 // Define our grunt file
 module.exports = function (grunt) {
-  // Configure the spritesheet
+  // Configure the spritesheets
   grunt.initConfig({
     sprite: {
       'top-down': {
@@ -37,8 +37,5 @@ module.exports = function (grunt) {
   });
 
   // Load in grunt-spritesmith
-  grunt.loadTasks('grunt-spritesmith');
-
-  // Run the sprite task by default
-  grunt.registerTask('default', ['sprite']);
+  grunt.loadNpmTasks('grunt-spritesmith');
 };

@@ -54,16 +54,19 @@ var info = layer['export']();
 
 ## Documentation
 Layout is a constructor function
+
 ```js
 /**
  * Layout adds items in an algorithmic fashion
  * @constructor
  * @param {String|Object} [algorithm="top-down"] Name of algorithm or custom algorithm to use
- * Algorithms available: top-down, left-right, diagonal, alt-diagonal, binary-tree
+ *   Available algorithms are listed in the Algorithms section
+ * @param {Mixed} [options] Options to provide for the algorithm
  */
 ```
 
 Items can be added via `addItem` which are required to have a `height` and `width`. Any additional info should be stored inside of `meta`.
+
 ```js
 /**
  * @param {Object} item Item to store -- this currently is mutated in-memory
@@ -74,6 +77,7 @@ Items can be added via `addItem` which are required to have a `height` and `widt
 ```
 
 `export` is how you take your items and organize them.
+
 ```js
 /**
  * @returns {Object} retObj
@@ -82,6 +86,52 @@ Items can be added via `addItem` which are required to have a `height` and `widt
  * @returns {Mixed[]} retObj.items Organized items
  */
 ```
+
+### Algorithms
+Currently `layout` supports 5 different layout types which are listed below.
+
+#### `top-down`
+The `top-down` algorithm places items vertically.
+
+By default, it sorts from smallest (top) to largest (bottom). However, this can be disabled via `sort: false`.
+
+##### Options
+- sort `Boolean` Flag to enable/disable sorting from smallest (top) to largest (bottom)
+    - By default, this is enabled (`true`)
+
+#### `left-right`
+The `left-right` algorithm places items horizontally.
+
+By default, it sorts from smallest (left) to largest (right). However, this can be disabled via `sort: false`.
+
+##### Options
+- sort `Boolean` Flag to enable/disable sorting from smallest (left) to largest (right)
+    - By default, this is enabled (`true`)
+
+#### `diagonal`
+The `diagonal` algorithm places items diagonally (top-left to bottom-right).
+
+By default, it sorts from smallest (top-left) to largest (bottom-right). However, this can be disabled via `sort: false`.
+
+##### Options
+- sort `Boolean` Flag to enable/disable sorting from smallest (top-left) to largest (bottom-right)
+    - By default, this is enabled (`true`)
+
+#### `alt-diagonal`
+The `alt-diagonal` algorithm places items diagonally (top-right to bottom-left).
+
+By default, it sorts from smallest (top-right) to largest (bottom-left). However, this can be disabled via `sort: false`.
+
+##### Options
+- sort `Boolean` Flag to enable/disable sorting from smallest (top-right) to largest (bottom-left)
+    - By default, this is enabled (`true`)
+
+#### `binary-tree`
+The `binary-tree` algorithm packs items via the [binary tree algorithm][].
+
+This is an efficient way to pack items into the smallest container possible.
+
+[binary tree algorithm]: http://codeincomplete.com/posts/2011/5/7/bin_packing/
 
 ### Custom algorithms
 You can add your own algorithm via `layout.addAlgorithm`

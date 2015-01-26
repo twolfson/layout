@@ -44,6 +44,6 @@
     "algorithm"
   ],
   "dependencies": {
-    "binpacking": "0.0.1"
+    "boxpack": "0.1.0"
   }
 }

@@ -1,4 +1,6 @@
 # layout changelog
+2.1.0 - Moved from `binpacking` to `boxpack` for `binary-tree` algorithm. Fixes #6 via @jonathandelgado
+
 2.0.2 - Documented algorithms with visualizations
 
 2.0.1 - Dropped `grunt`, updated README

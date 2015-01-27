@@ -60,7 +60,7 @@ exports['layout'] = {
     test.done();
   },
   'left-right': function (test) {
-    test.expect(6);
+    test.expect(7);
 
     // A left-right layout
     var layer = layout('left-right');
@@ -76,11 +76,12 @@ exports['layout'] = {
         test.equal(result.items[1].y, 0, 'Second item is 0 pixels from the top');
         test.equal(result.items[1].x, 10, 'Second item is 10 pixels from the left');
         test.equal(result.items[2].x, 20, 'Third item is 20 pixels from the left');
+        test.ok(result.items[0].meta, 'We maintain meta property');
 
     test.done();
   },
   'diagonal': function (test) {
-    test.expect(7);
+    test.expect(8);
 
     // A diagonal layout
     var layer = layout('diagonal');
@@ -97,11 +98,12 @@ exports['layout'] = {
         test.equal(result.items[1].x, 10, 'Second item is 10 pixels from the left');
         test.equal(result.items[2].y, 30, 'Third item is 30 pixels from the top');
         test.equal(result.items[2].x, 20, 'Third item is 20 pixels from the left');
+        test.ok(result.items[0].meta, 'We maintain meta property');
 
     test.done();
   },
   'reverse-diagonal': function (test) {
-    test.expect(9);
+    test.expect(10);
 
     // A alt-diagonal layout
     var layer = layout('alt-diagonal');
@@ -120,11 +122,12 @@ exports['layout'] = {
         test.equal(result.items[1].x, 60 - 10 - 10, 'Second item is 10 pixels from the left');
         test.equal(result.items[2].y, 30, 'Third item is 30 pixels from the top');
         test.equal(result.items[2].x, 60 - 40 - 20, 'Third item is 30 pixels from the right');
+        test.ok(result.items[0].meta, 'We maintain meta property');
 
     test.done();
   },
   'binary-tree': function (test) {
-    test.expect(9);
+    test.expect(10);
 
     // A alt-diagonal layout
     var layer = layout('binary-tree');
@@ -143,6 +146,7 @@ exports['layout'] = {
         test.equal(typeof result.items[1].x, 'number');
         test.equal(typeof result.items[2].y, 'number');
         test.equal(typeof result.items[2].x, 'number');
+        test.ok(result.items[0].meta, 'We maintain meta property');
 
     test.done();
   },

@@ -129,7 +129,7 @@ exports['layout'] = {
   'binary-tree': function (test) {
     test.expect(10);
 
-    // A alt-diagonal layout
+    // A binary-tree layout
     var layer = layout('binary-tree');
       // with multiple items
       layer.addItem({'height': 20, 'width': 10, 'meta': 'medium'});
@@ -146,6 +146,26 @@ exports['layout'] = {
         test.equal(typeof result.items[1].x, 'number');
         test.equal(typeof result.items[2].y, 'number');
         test.equal(typeof result.items[2].x, 'number');
+        test.ok(result.items[0].meta, 'We maintain meta property');
+
+    test.done();
+  },
+  // DEV: This is a regression against `boxpack`
+  //   https://github.com/Ensighten/spritesmith/issues/48
+  'binary-tree optimal packing': function (test) {
+    test.expect(4);
+
+    // A binary-tree layout
+    var layer = layout('binary-tree');
+      // with multiple items
+      layer.addItem({'height': 32, 'width': 32, 'meta': 'medium'});
+      layer.addItem({'height': 8, 'width': 8, 'meta': 'small'});
+      layer.addItem({'height': 64, 'width': 64, 'meta': 'large'});
+        // organizes them in the best packed manner
+        var result = layer['export']();
+        test.equal(result.height, 50, 'Result has a height of 50');
+        test.equal(result.width, 50, 'Result has a width of 50');
+        test.equal(result.items.length, 3, 'Result has 3 items');
         test.ok(result.items[0].meta, 'We maintain meta property');
 
     test.done();

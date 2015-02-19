@@ -162,9 +162,10 @@ exports['layout'] = {
       layer.addItem({'height': 8, 'width': 8, 'meta': 'small'});
       layer.addItem({'height': 64, 'width': 64, 'meta': 'large'});
         // organizes them in the best packed manner
+        // DEV: Only adjust values if their product (multiply) is less than the current one
         var result = layer['export']();
-        test.equal(result.height, 50, 'Result has a height of 50');
-        test.equal(result.width, 50, 'Result has a width of 50');
+        test.equal(result.height, 64, 'Result has a height of 50');
+        test.equal(result.width, 104, 'Result has a width of 50');
         test.equal(result.items.length, 3, 'Result has 3 items');
         test.ok(result.items[0].meta, 'We maintain meta property');
 

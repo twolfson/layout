@@ -1,4 +1,6 @@
 # layout changelog
+2.2.0 - Moved from `boxpack` to `bin-pack` for `binary-tree` algorithm. Fixes Ensighten/spritesmith#48 (optimal packing regression)
+
 2.1.0 - Moved from `binpacking` to `boxpack` for `binary-tree` algorithm. Fixes #6 via @jonathandelgado
 
 2.0.2 - Documented algorithms with visualizations

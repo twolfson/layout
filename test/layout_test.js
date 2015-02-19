@@ -164,8 +164,8 @@ exports['layout'] = {
         // organizes them in the best packed manner
         // DEV: Only adjust values if their product (multiply) is less than the current one
         var result = layer['export']();
-        test.equal(result.height, 96, 'Result has a height of 64');
-        test.equal(result.width, 64, 'Result has a width of 104');
+        test.equal(result.height, 64, 'Result has a height of 64');
+        test.equal(result.width, 96, 'Result has a width of 96');
         test.equal(result.items.length, 3, 'Result has 3 items');
         test.ok(result.items[0].meta, 'We maintain meta property');
 
